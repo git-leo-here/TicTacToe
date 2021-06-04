@@ -1,0 +1,36 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    margin:0;
+    padding: 0;
+
+}
+
+.board{
+    padding:10px;
+    // background:rgb(156, 130, 13);
+    border-radius:20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr) ;
+    gap:10px;
+    margin: 10px auto;
+    width:40%;
+    max-width:600px;
+    min-width: 400px;
+    // align-tracks: space-between;
+    // justify-tracks: space-between;
+}
+
+.board-item{
+    text-align: center;
+    text-justify: center;
+    height:100px;
+    // opacity: 0.9;
+    border-radius:10px;
+}
+
+#current-player{
+    font-size:30px;
+}
