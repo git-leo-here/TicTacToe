@@ -16,9 +16,9 @@ html{
     grid-template-rows:repeat(3,1fr) ;
     gap:10px;
     margin: 10px auto;
-    width:40%;
+    width:100%;
     max-width:600px;
-    min-width: 400px;
+    min-width:400px;
     // align-tracks: space-between;
     // justify-tracks: space-between;
 }
