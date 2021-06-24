@@ -1,5 +1,6 @@
 html{
     box-sizing: border-box;
+    
 }
 *{
     margin:0;
@@ -32,6 +33,7 @@ html{
     border-radius:10px;
     font-size: 5rem;
     background:rgb(202, 163, 109);
+    font-family: 'Nunito', sans-serif;
 
     &:hover{
         cursor: pointer;

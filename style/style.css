@@ -32,6 +32,7 @@ html {
   border-radius: 10px;
   font-size: 5rem;
   background: #caa36d;
+  font-family: 'Nunito', sans-serif;
 }
 
 .board-item:hover {
