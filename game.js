@@ -23,34 +23,36 @@ class Player{
 }
 
 function play(e){
-    let position
+    if (isGameContinue){
+        let position
         for(var key of BoardItems.keys()) {
             if (e.target === BoardItems.item(key)){
                 position = key
                 break
             }
         }
-    let row=Math.floor(position/3) //floor division by 3
-    let column=(position%3)
-    if (board[row][column]===0){
-        e.target.innerHTML=`${g.current_player.char}`
-        e.target.style.color=g.current_player.clr
-        board[row][column]=g.current_player.char
-        
-        
-        if (checkWinner()){
-            console.log(checkWinner())
-            document.getElementById('currentPlayer').innerHTML=`Player ${g.current_player.char} won`
-
-        }
-        else{
+        let row=Math.floor(position/3) //floor division by 3
+        let column=(position%3)
+        if (board[row][column]===0){
+            e.target.innerHTML=`${g.current_player.char}`
+            e.target.style.color=g.current_player.clr
+            board[row][column]=g.current_player.char
             
-            g.changePlayer()
-            document.getElementById('currentPlayer').innerHTML=`Player ${g.current_player.char}'s Turn`
+            
+            if (checkWinner()){
+                console.log(checkWinner())
+                document.getElementById('currentPlayer').innerHTML=`Player ${g.current_player.char} won`
+                isGameContinue=false
+            }
+            else{
+                
+                g.changePlayer()
+                document.getElementById('currentPlayer').innerHTML=`Player ${g.current_player.char}'s Turn`
+            }
         }
     }
-    }
-    
+}
+
 
 function checkWinner(){
     for (var i=0;i<=3;i++){
@@ -89,12 +91,7 @@ function checkWinner(){
 
 
                 
-
-    
-
-
-
-
+let isGameContinue = true;
 
 playerX=new Player('X', 'red')
 playerO=new Player('O', 'blue')
